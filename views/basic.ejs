@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculator.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="/" class="back-btn">← Home</a>
+      <h1>Basic Calculator</h1>
+      <button id="history-btn" class="history-btn">History</button>
+    </div>
+    
+    <div class="calculator basic-calculator">
+      <div class="display">
+        <div id="previous-operand" class="previous-operand"></div>
+        <div id="current-operand" class="current-operand">0</div>
+      </div>
+      
+      <div class="buttons">
+        <button class="clear" data-action="clear">AC</button>
+        <button data-action="delete">DEL</button>
+        <button data-action="percent">%</button>
+        <button data-operation="÷">÷</button>
+        
+        <button data-number="7">7</button>
+        <button data-number="8">8</button>
+        <button data-number="9">9</button>
+        <button data-operation="×">×</button>
+        
+        <button data-number="4">4</button>
+        <button data-number="5">5</button>
+        <button data-number="6">6</button>
+        <button data-operation="-">-</button>
+        
+        <button data-number="1">1</button>
+        <button data-number="2">2</button>
+        <button data-number="3">3</button>
+        <button data-operation="+">+</button>
+        
+        <button data-number="0" class="span-two">0</button>
+        <button data-number=".">.</button>
+        <button data-equals class="equals">=</button>
+      </div>
+    </div>
+    
+    <div id="history-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Calculation History</h2>
+        <div id="history-list" class="history-list"></div>
+        <button id="clear-history" class="clear-history-btn">Clear History</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/js/basic-calculator.js"></script>
+</body>
+</html>
